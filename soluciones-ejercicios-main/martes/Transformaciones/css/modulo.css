@@ -1,0 +1,52 @@
+.container {
+  position: relative;
+}
+
+.container > .cuadro {
+  width: 50%;
+  height: 50%;
+  position: absolute;
+
+  transition: transform 500ms;
+}
+
+.rojo {
+  background-color: rgb(255, 0, 0);
+  top: 0;
+  left: 0;
+  transform-origin: top left;
+}
+
+.verde {
+  background-color: rgb(0, 128, 0);
+  bottom: 0;
+  right: 0;
+
+  transform-origin: bottom right;
+}
+
+.azul {
+  background: rgb(0, 0, 255);
+  bottom: 0;
+  left: 0;
+
+  transform-origin: bottom left;
+}
+
+.amarillo {
+  background-color: rgb(255, 255, 0);
+  top: 0;
+  right: 0;
+
+  transform-origin: top right;
+}
+
+.container:hover .rojo,
+.container:hover .verde {
+  transform: rotate(90deg);
+}
+
+.container:hover .amarillo,
+.container:hover .azul {
+  transform: rotate(-90deg);
+}

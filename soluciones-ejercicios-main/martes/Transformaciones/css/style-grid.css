@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  border: 1px solid;
+  height: 20rem;
+  width: 20rem;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+
+  grid-template-areas:
+    "rojo amarillo"
+    "azul verde";
+}
+
+.container > p {
+  grid-area: 1 / 1 / -1 / -1;
+
+  place-self: center;
+
+  z-index: -1;
+}
+
+.container > div {
+  /*   border: 1px solid; */
+
+  transition: transform 500ms;
+}
+
+.rojo {
+  background-color: rgb(255, 0, 0);
+
+  transform-origin: top left;
+
+  grid-area: rojo;
+}
+
+.verde {
+  background-color: rgb(0, 128, 0);
+
+  transform-origin: bottom right;
+
+  grid-area: verde;
+}
+
+.azul {
+  background: rgb(0, 0, 255);
+
+  transform-origin: bottom left;
+
+  grid-area: azul;
+}
+
+.amarillo {
+  background-color: rgb(255, 255, 0);
+
+  transform-origin: top right;
+
+  grid-area: amarillo;
+}
+
+.container:hover .rojo,
+.container:hover .verde {
+  transform: rotate(90deg);
+}
+
+.container:hover .amarillo,
+.container:hover .azul {
+  transform: rotate(-90deg);
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formularios</title>
+</head>
+<body>
+  <form action="#" method="GET">
+    <fieldset>
+      <legend>Datos personales</legend>
+      
+      <ul>
+        <li>
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" required autofocus>
+        </li>
+        <li>
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" required>
+        </li>
+        <li>
+          <label for="url">URL</label>
+          <input type="url" id="url" name="url" placeholder="Escribe la URL de tu página web personal">
+        </li>
+      </ul>
+
+    </fieldset>
+
+    <fieldset>
+      <legend>Datos de tiempo</legend>
+
+      <ul>
+        <li>
+          <label for="fecha">Fecha</label>
+          <input type="date" name="fecha" id="fecha">
+        </li>
+        <li>
+          <label for="tiempo">Tiempo</label>
+          <input type="time" id="tiempo" name="tiempo">
+        </li>
+        <li>
+          <label for="fecha-hora">Fecha y hora</label>
+          <input type="datetime-local" name="fecha-hora" id="fecha-hora">
+        </li>
+        <li>
+          <label for="mes">Mes</label>
+          <input type="month" name="mes" id="mes">
+        </li>
+        <li>
+          <label for="semana">Semana</label>
+          <input type="week" name="semana" id="semana">
+        </li>
+      </ul>
+
+    </fieldset>
+
+    <fieldset>
+      <legend>Otros datos</legend>
+
+      <ul>
+        <li>
+          <label for="num">Número</label>
+          <input type="number" name="num" id="num" min="-10" max="10">
+        </li>
+        <li>
+          <label for="tlf">Teléfono</label>
+          <input type="tel" name="tlf" id="tlf" value="+34666666666" readonly>
+        </li>
+        <li>
+          <label for="search">Término de búsqueda</label>
+          <input type="search" id="search" name="search" disabled >
+        </li>
+        <li>
+          <label for="color">Color favorito</label>
+          <input type="color" id="color" name="color">
+        </li>
+      </ul>
+    </fieldset>
+
+    <button>Enviar</button>
+  </form>
+</body>
+</html>

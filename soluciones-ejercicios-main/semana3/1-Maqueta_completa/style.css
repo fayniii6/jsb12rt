@@ -1,0 +1,95 @@
+@import url(base.css);
+
+body {
+  display: grid;
+  grid-template-rows: 10rem 2rem 1fr 2rem;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+header form {
+  display: flex;
+}
+
+header menu {
+  display: flex;
+  gap: 1rem;
+}
+
+header menu li {
+  display: flex;
+}
+
+/* NAV */
+body > nav menu {
+  display: flex;
+}
+
+/* MAIN */
+main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-evenly;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+}
+
+article img {
+  flex-shrink: 0;
+}
+
+article p.description {
+  flex-grow: 1;
+}
+
+/* FOOTER */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+@media (min-width: 600px) {
+  body {
+    grid-template-rows: 5rem 1fr 2rem;
+
+    grid-template-columns: 10rem 1fr;
+
+    grid-template-areas:
+      "header header"
+      "nav main"
+      "footer footer";
+  }
+
+  header,
+  footer {
+    grid-column: span 2;
+  }
+
+  /* HEADER */
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  /* NAV */
+  body > nav menu {
+    flex-direction: column;
+  }
+
+  /* FOOTER */
+  footer {
+    justify-content: center;
+    gap: 2rem;
+  }
+}
